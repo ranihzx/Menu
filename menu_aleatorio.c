@@ -84,6 +84,7 @@ float *busca(float vetor[], int tam, float valor, int *escolha) {
 
 	if (resultado == NULL) {
     printf("\nErro ao alocar memória.\n");
+    system("pause");
     exit(1);
   }
 
@@ -231,7 +232,7 @@ int main() {
             }
           }
           aux_escolha = 1;
-          free(resultado);
+          if(resultado) free(resultado);
         } while (escolha == 1);
       break;
 
