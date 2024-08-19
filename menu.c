@@ -79,7 +79,7 @@ float *busca(float vetor[], int tam, float valor, int *escolha) {
 	int aux_resultado = 0;
 	float *resultado = (float *)malloc(tam * sizeof(float));
 
-	if (resultado == NULL) {
+	if(resultado == NULL) {
     printf("\nErro ao alocar memória.\n");
     exit(1);
   }
@@ -228,7 +228,7 @@ int main() {
             }
           }
           aux_escolha = 1;
-          free(resultado);
+          if(resultado) free(resultado);
         } while (escolha == 1);
       break;
 
